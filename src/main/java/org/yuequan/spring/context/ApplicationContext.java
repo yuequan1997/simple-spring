@@ -1,5 +1,7 @@
 package org.yuequan.spring.context;
 
-public interface ApplicationContext {
+import org.yuequan.spring.beans.factory.BeanFactory;
+
+public interface ApplicationContext extends BeanFactory {
 
 }

@@ -5,7 +5,7 @@ import org.yuequan.spring.beans.factory.support.BeanDefinitionRegistry;
 import org.yuequan.spring.beans.factory.support.DefaultListableBeanFactory;
 import org.yuequan.spring.context.ApplicationContext;
 
-public class GenericApplicationContext implements BeanDefinitionRegistry,ApplicationContext {
+public class GenericApplicationContext extends AbstractApplicationContext implements BeanDefinitionRegistry {
 
     private final DefaultListableBeanFactory beanFactory;
 
@@ -30,4 +30,13 @@ public class GenericApplicationContext implements BeanDefinitionRegistry,Applica
         return beanFactory.getBeanDefinitionCount();
     }
 
+    @Override
+    public DefaultListableBeanFactory getBeanFactory() {
+        return beanFactory;
+    }
+
+    @Override
+    public Object getBean(String name) {
+        return beanFactory.getBean(name);
+    }
 }

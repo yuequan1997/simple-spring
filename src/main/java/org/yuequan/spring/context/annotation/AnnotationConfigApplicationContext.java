@@ -11,9 +11,6 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
         refresh();
     }
 
-    private void refresh() {
-    }
-
     public void registry(Class<?>... annotatedClasses) {
 
     }
